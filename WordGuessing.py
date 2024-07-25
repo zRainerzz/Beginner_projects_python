@@ -44,6 +44,8 @@ def main():
         i+=1
         if  (set(dots) == set(win)):
             break
+    with open ("WordGuessing_ranking.csv","a") as file:
+        file.write(f"{first_name},{last_name},{win} \n")
 
     print(f"Congratulations {first_name}, You Won.{dots}")
 
