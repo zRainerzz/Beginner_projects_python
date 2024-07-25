@@ -28,13 +28,14 @@ def main():
     dots=[]
     for _ in range(len(win)):
         dots.append["."]
-
+    print("So try your typo 1 by1 according to word's lengh ",dots)
     i=0
     while (i!=a) or (winning_word != win):
         #starting to guess.
         guess=input("Give your first letter. ")
         i+=1
-        
+        for i in range (len(dots)):
+            i+=1
 
 
 
