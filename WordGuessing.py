@@ -22,6 +22,7 @@ def input_1_letter(guess):
         return guess
     
 
-def word_contain()
+def word_contain():
+    ...
 if __name__=="main":
     main()
