@@ -17,36 +17,35 @@ def main():
         a=int(input("Choose a number of tries which should be not over 15 "))
     except TypeError and a>15:
         a=int(input("type an integer under 15. "))
-
-    #guesses input type configuration.
-    try:
-        tries=input("type your guess here. ").upper()
-    except tries not in ["A-Z"] and (len(tries))>1:
-        tries=input("type your guess here, 1 letter is a must. ").upper()
-    i=0
+        
     #making a list of dots
     dots=[]
     for _ in range(len(win)):
         dots.append(".")
     print("So try your typo 1 by1 according to word's lengh ",dots)
+
+
     i=0
-    while (i!=a) or (winning_word != win):
+    while (i!=a) or (set(winning_word) != set(win)):
         #starting to guess.
-        guess=input("Give your first letter. ")
-        i+=1
-        for j in range (len(dots)):
+        #guesses input type configuration.
+        try:
+            guess=input("Give your first letter. ").upper()
+        except guess not in ["A-Z"] and (len(guess))>1:
+            guess=input("type your guess here, 1 letter is a must. ").upper()
+
+
             #moving through all letters
-            dot=0
-            if guess == win[dots]:
-                dots[j].append(guess)
-                print ("you were right about it.", dots)
-                dot +=1
-            else:
-                break
+        dot=0
+        if guess == win[dot]:
+            dots[j]=guess
+            print ("you were right about it.", dots)
+            dot +=1
 
-
-
-
+        else:
+            break
+        i+=1
+    print(winning_word, "okay")
 
 if __name__=="__main__":
     main()
