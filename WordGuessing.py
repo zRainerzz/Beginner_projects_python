@@ -23,8 +23,8 @@ def main():
         tries=input("type your guess here. ").upper()
     except tries not in ["A-Z"] and (len(tries))>1:
         tries=input("type your guess here, 1 letter is a must. ").upper()
-
-    while not a and (tries not in win):
+    i=0
+    while (i!=a) and (tries not in win):
 
 
 
