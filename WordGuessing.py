@@ -40,10 +40,10 @@ def main():
         if guess == win[dot]:
             dots[j]=guess
             print ("you were right about it.", dots)
-            dot +=1
+            
 
         else:
-            break
+            dot +=1
         i+=1
     print(winning_word, "okay")
 
