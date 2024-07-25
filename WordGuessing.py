@@ -49,7 +49,7 @@ def main():
         if  (set(dots) == set(win)):
             with open ("WordGuessing_ranking.csv","a") as file:
                 file.write(f"{first_name},{last_name},{win},{i}/{a} \n")
-                print(f"Congratulations {first_name}, You Won.{dots}, in {i}/{a}tries.")
+                print(f"Congratulations {first_name}, You Won.{dots}, in {i}tries.")
             break
 
         if (i==a) and not (set(dots) == set(win)):
@@ -65,7 +65,7 @@ def is_alphabetic(name):
 def letters_15(a):
     while a>10:
         a=int(input("a number which is 15 or less. "))
-    return a
+    return a    
 
 
 
