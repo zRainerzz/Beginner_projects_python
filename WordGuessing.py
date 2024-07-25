@@ -38,6 +38,8 @@ def main():
             if guess == win[j]:
                 dots[j].append(guess)
                 print ("you were right about it.", dots)
+            else:
+                break
             
 
 
