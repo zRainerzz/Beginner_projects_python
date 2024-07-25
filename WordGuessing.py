@@ -17,6 +17,7 @@ def main():
         a=int(input("Choose a number of tries which should be not over 15 "))
     except TypeError and a>15:
         a=int(input("type an integer under 15. "))
+        
     #guess configuration.
     try:
         tries=input("type your guess here. ").upper()
