@@ -5,8 +5,8 @@ def main():
     result=[]
     converted=[]
     guess="a"
-    wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","Success","PALESTINE","FREE"]
-    win=random.shuffle(wordslist)
+    wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
+    win=random.choice(wordslist)
     converted=list_convert(win)
     result=word_contain(converted)
 
