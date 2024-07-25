@@ -1,7 +1,10 @@
 import random
 
 def main():
-    name=input("It would be nice if you introduce yourself. isn't it?")
+    try:
+        name=input("It would be nice if you introduce yourself. isn't it?").lower
+    except name not in ["a-z"]:
+
     result=[]
     converted=[]
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
@@ -20,8 +23,9 @@ def main():
         guess=input("What's your first letter to start with?").upper()
         if len(guess)!=1 or (guess not in ["A-Z","a-z"]):
             guess=input("1 letter is a must.")
-        if win==
-    wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
+        if win==converted:
+            print("you won!, congratz.")
+            break
     print(result)
 
 
