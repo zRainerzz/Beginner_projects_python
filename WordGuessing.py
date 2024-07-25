@@ -5,19 +5,20 @@ def main():
     win=random.choice(wordslist)
     #first name && last name.
 
-    try:
-        first_name=input("your first name,It would be nice if you introduce yourself. isn't it? ").lower()
-        last_name=input("What about your last name?").lower()
+    first_name = input("let's get to know each other, your first name: ").lower
+    while not first_name.isalpha():
+        first_name = input("Hold on, does your name contain other than alphabets? ")
+    last_name=input("What about your last name?")
+    while not last_name.isalpha():
+        last_name=input("Wait a second, your last name contains other than alphabets? ")
+        
 
-    except (first_name not in ["a-z"]) and (last_name not in ["a-z"]): 
-        first_name=input("you cannot have other than letters in your name dude").lower()
-        last_name=input("what? your last name must have no more than letters.").lower()
 
     #number of guesses.
     try:
         a=int(input("Choose a number of tries which should be not over 15 "))
     except TypeError and a>15:
-        a=int(input("type an integer under 15. "))
+        a=int(input("your tries count should be an integer under 15. "))
         
     #making a list of dots
     dots=[]
@@ -43,9 +44,10 @@ def main():
                 print ("you were right about it.", dots)
         i+=1
         if  (set(dots) == set(win)):
+            with open ("WordGuessing_ranking.csv","a") as file:
+                file.write(f"{first_name},{last_name},{win} \n")
             break
-    with open ("WordGuessing_ranking.csv","a") as file:
-        file.write(f"{first_name},{last_name},{win} \n")
+
 
     print(f"Congratulations {first_name}, You Won.{dots}")
 
