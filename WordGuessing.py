@@ -3,7 +3,7 @@ import random
 def main():
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
     win=random.choice(wordslist)
-
+    winning_word=""
     #first name && last name.
     try:
         first_name=input("your first name,It would be nice if you introduce yourself. isn't it? ").lower()
@@ -24,7 +24,18 @@ def main():
     except tries not in ["A-Z"] and (len(tries))>1:
         tries=input("type your guess here, 1 letter is a must. ").upper()
     i=0
-    while (i!=a) and (tries not in win):
+    #making a list of dots
+    dots=[]
+    for _ in range(len(win)):
+        dots.append["."]
+
+    i=0
+    while (i!=a) or (winning_word != win):
+        #starting to guess.
+        guess=input("Give your first letter. ")
+        i+=1
+        
+
 
 
 
