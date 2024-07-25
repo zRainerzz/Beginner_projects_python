@@ -5,12 +5,10 @@ def main():
     win=random.choice(wordslist)
     #first name && last name.
 
-    first_name = input("let's get to know each other, your first name: ").lower
-    while not first_name.isalpha():
-        first_name = input("Hold on, does your name contain other than alphabets? ")
-    last_name=input("What about your last name?")
-    while not last_name.isalpha():
-        last_name=input("Wait a second, your last name contains other than alphabets? ")
+    first_name = input("let's get to know each other, your first name: ").lower()
+    alphabetics(first_name)
+    last_name=input("What about your last name?").lower
+    alphabetics(last_name)
         
 
 
@@ -32,7 +30,7 @@ def main():
         #starting to guess.
         #guesses input type configuration.
         guess=input("Give 1 letter. ").upper()
-        while guess not in ["A-Z"] and (len(guess))>1:
+        while not (alphabetics(guess)) and ((len(guess))>1):
             guess=input("type your guess here, 1 letter is a must. ").upper()
 
 
@@ -46,10 +44,20 @@ def main():
         if  (set(dots) == set(win)):
             with open ("WordGuessing_ranking.csv","a") as file:
                 file.write(f"{first_name},{last_name},{win} \n")
+                print(f"Congratulations {first_name}, You Won.{dots}")
+            break
+
+        if (i==a) and not (set(dots) == set(win)):
+            print ("Unfortunately,you tried, but failed")
             break
 
 
-    print(f"Congratulations {first_name}, You Won.{dots}")
+
+def alphabetics():
+    x=input("let's get to know each other, your first name: ")
+    while x not in "abcdefjghijklmnepqrst":
+        x=input("wait,your name contains other than alphabets ? ")
+    return x
 
 
 
