@@ -4,11 +4,25 @@ def main():
     name=input("It would be nice if you introduce yourself. isn't it?")
     result=[]
     converted=[]
-    guess="a"
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
     win=random.choice(wordslist)
     converted=list_convert(win)
     result=word_contain(converted)
+    try:
+        a=int(input("Choose a number of tries which should be not over 15"))
+    except TypeError or a>15:
+        a=int(input("type an integer under 15."))
+
+
+    for _ in range(a):
+        guess=input("What's your first letter to start with?").upper()
+        if len(guess)!=1 or (guess not in ["A-Z","a-z"]):
+            guess=input("1 letter is a must.")
+    wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
+    win=random.choice(wordslist)
+    converted=list_convert(win)
+    result=word_contain(converted)
+    print(result)
 
 
 
@@ -18,20 +32,6 @@ def word_contain(win,guess,converted):
         if guess==win[i]:
             converted[i]=guess
     return converted
-
-        
-
-
-
-def input_1_letter(guess):
-#condition to put 1 letter only and being an alphabet is a must.
-    guess=input("What's your first letter to start with?").upper()
-    if len(guess):
-        guess=input("1 letter is a must")
-    elif (guess not in ["A-Z","a-z"]):
-        guess=input("Alphabets are a must.")
-    else:
-        return guess
     
 
 def list_convert(win):
