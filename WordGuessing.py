@@ -20,7 +20,7 @@ def main():
             print("Invalid last name. Please enter only alphabetic characters.")
 
     #number of guesses.
-    a=int(input("Choose a number of tries which should be not over 15 "))
+    a=int(input("Choose a number of tries which should be not 9"))
     letters_15(a)
         
     #making a list of dots
@@ -63,7 +63,7 @@ def is_alphabetic(name):
     return name.isalpha()
 
 def letters_15(a):
-    while a>16:
+    while a>9:
         a=int(input("a number which is 15 or less. "))
     return a
 
