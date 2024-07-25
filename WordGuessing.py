@@ -6,9 +6,9 @@ def main():
     #first name && last name.
 
     first_name = input("let's get to know each other, your first name: ").lower()
-    alphabetics(first_name)
+    first_name.alphabetics()
     last_name=input("What about your last name?").lower
-    alphabetics(last_name)
+    last_name.alphabetics()
         
 
 
