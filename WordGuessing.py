@@ -2,8 +2,12 @@ import random
 
 def main():
     try:
-        name=input("It would be nice if you introduce yourself. isn't it?").lower
-    except name not in ["a-z"]:
+        first_name=input("your first name,It would be nice if you introduce yourself. isn't it? ").lower()
+        last_name=input("What about your last name?").lower()
+    except (first_name not in ["a-z"]) and (last_name not in ["a-z"]):
+        name=input("you cannot have other than letters in your name ").lower()
+        last_name=input("").lower
+
 
     result=[]
     converted=[]
