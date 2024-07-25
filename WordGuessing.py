@@ -35,13 +35,13 @@ def main():
         guess=input("Give your first letter. ")
         i+=1
         for j in range (len(dots)):
-            if guess == win[j]:
+            dot=0
+            if guess == win[dots]:
                 dots[j].append(guess)
                 print ("you were right about it.", dots)
+                dot +=1
             else:
                 break
-            
-
 
 
 
