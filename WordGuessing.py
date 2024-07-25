@@ -35,6 +35,7 @@ def main():
         guess=input("Give your first letter. ")
         i+=1
         for j in range (len(dots)):
+            #moving through all letters
             dot=0
             if guess == win[dots]:
                 dots[j].append(guess)
