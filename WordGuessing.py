@@ -26,24 +26,21 @@ def main():
 
     lenght=len(win)
     i=0
-    while (i!=a) or (set(winning_word) != set(win)):
+    while (i!=a) and (len(dots) != len(win)):
         #starting to guess.
         #guesses input type configuration.
-        try:
-            guess=input("Give your first letter. ").upper()
-        except guess not in ["A-Z"] and (len(guess))>1:
+        guess=input("Give your first letter. ").upper()
+        while guess not in ["A-Z"] and (len(guess))>1:
             guess=input("type your guess here, 1 letter is a must. ").upper()
 
 
             #moving through all letters
         dot=0
-        if (guess == win[dot]) and (dot<(len(win))):
-            dots[dot]=guess
-            print ("you were right about it.", dots)
-        else:
-            dot +=1
+        for dot in range (len(win)):
+            if (guess == win[dot]) and (dot<lenght):
+                dots[dot]=guess
+                print ("you were right about it.", dots)
         i+=1
-    print(winning_word, "okay")
 
 if __name__=="__main__":
     main()
