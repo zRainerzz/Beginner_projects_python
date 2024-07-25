@@ -30,7 +30,7 @@ def main():
     while (i!=a):
         #starting to guess.
         #guesses input type configuration.
-        guess=input("Give your first letter. ").upper()
+        guess=input("Give 1 letter. ").upper()
         while guess not in ["A-Z"] and (len(guess))>1:
             guess=input("type your guess here, 1 letter is a must. ").upper()
 
