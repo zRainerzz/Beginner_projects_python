@@ -30,7 +30,7 @@ def main():
         #starting to guess.
         #guesses input type configuration.
         guess=input("Give 1 letter. ").upper()
-        while not (alphabetics(guess)) and ((len(guess))>1):
+        while not (guess not in "ABCDEFGHIJKLMNEPQRST") and ((len(guess))>1):
             guess=input("type your guess here, 1 letter is a must. ").upper()
 
 
@@ -53,11 +53,7 @@ def main():
 
 
 
-def alphabetics():
-    x=input("let's get to know each other, your first name: ")
-    while x not in "abcdefjghijklmnepqrst":
-        x=input("wait,your name contains other than alphabets ? ")
-    return x
+
 
 
 
