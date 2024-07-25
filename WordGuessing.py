@@ -23,6 +23,7 @@ def input_1_letter(guess):
     
 
 def word_contain():
+#test if the letter is in the precised word and place it
     ...
 if __name__=="main":
     main()
