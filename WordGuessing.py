@@ -1,13 +1,25 @@
 import random
-name=input("It would be nice if you introduce yourself. isn't it?")
+
 def main():
+    name=input("It would be nice if you introduce yourself. isn't it?")
+    result=[]
+    converted=[]
     guess="a"
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","Success","PALESTINE","FREE"]
     win=random.shuffle(wordslist)
-    for i in range (len(win)):
-        input_1_letter(guess)
-        if guess
+    converted=list_convert(win)
+    result=word_contain(converted)
 
+
+
+def word_contain(win,guess,converted):
+#test if the guess is in win or not.
+    for i in range (len(win)):
+        if guess==win[i]:
+            converted[i]=guess
+    return converted
+
+        
 
 
 
@@ -22,8 +34,15 @@ def input_1_letter(guess):
         return guess
     
 
-def word_contain():
-#test if the letter is in the precised word and place it
-    ...
+def list_convert(win):
+#make a list of dot according to letters in a word.
+    result = []
+
+    for _ in (len(win)):
+            result.append(".")
+    return result
+
+
+
 if __name__=="main":
     main()
