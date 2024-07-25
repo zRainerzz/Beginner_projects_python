@@ -49,7 +49,7 @@ def main():
         if  (set(dots) == set(win)):
             with open ("WordGuessing_ranking.csv","a") as file:
                 file.write(f"{first_name},{last_name},{win} \n")
-                print(f"Congratulations {first_name}, You Won.{dots}, in {i}tries.")
+                print(f"Congratulations {first_name}, You Won.{dots}, in {i}/{a}tries.")
             break
 
         if (i==a) and not (set(dots) == set(win)):
