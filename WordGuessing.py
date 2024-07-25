@@ -20,7 +20,7 @@ def main():
             print("Invalid last name. Please enter only alphabetic characters.")
 
     #number of guesses.
-    a=int(input("Choose a number of tries which should be not 9 "))
+    a=int(input("Choose a number of tries which should be not 10 "))
     letters_15(a)
         
     #making a list of dots
