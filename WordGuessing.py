@@ -5,15 +5,19 @@ def main():
     win=random.choice(wordslist)
     #first name && last name.
     while True:
-
-        first_name = input("let's get to know each other, your first name: ").lower()
-        last_name=input("Your last name please.").lower()
-        if first_name not in "abcdefghijklmnopqrstuvwxyz":
-            first_name=input("WAIT! your name contains other than alphabets? ").lower()
-        elif last_name not in "abcdefghijklmnopqrstuvwxyz":
-            last_name=input("WAIT, your last name contains other than alphabets? ")
-        else:
+        first_name = input("Enter your first: ")
+        if is_alphabetic(first_name):
             break
+        else:
+            print("Invalid first name. Please enter only alphabetic characters.")
+
+
+    while True:
+        last_name = input("Enter your last name: ")
+        if is_alphabetic(last_name):
+            break
+        else:
+            print("Invalid last name. Please enter only alphabetic characters.")
 
     #number of guesses.
     try:
@@ -57,6 +61,8 @@ def main():
 
 
 
+def is_alphabetic(name):
+    return name.isalpha()
 
 
 
