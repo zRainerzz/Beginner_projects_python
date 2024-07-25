@@ -62,8 +62,8 @@ def main():
 def is_alphabetic(name):
     return name.isalpha()
 
-def letters_15():
-    while a>15:
+def letters_15(a):
+    while a>10:
         a=int(input("a number which is 15 or less. "))
     return a
 
