@@ -48,7 +48,7 @@ def main():
         i+=1
         if  (set(dots) == set(win)):
             with open ("WordGuessing_ranking.csv","a") as file:
-                file.write(f"{first_name},{last_name},{win},{i}/a tries \n")
+                file.write(f"{first_name},{last_name},{win},{i}/{a} \n")
                 print(f"Congratulations {first_name}, You Won.{dots}, in {i}/{a}tries.")
             break
 
