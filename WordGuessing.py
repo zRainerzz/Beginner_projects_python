@@ -4,13 +4,16 @@ def main():
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
     win=random.choice(wordslist)
     #first name && last name.
+    while True:
 
-    first_name = input("let's get to know each other, your first name: ").lower()
-    first_name.alphabetics()
-    last_name=input("What about your last name?").lower
-    last_name.alphabetics()
-        
-
+        first_name = input("let's get to know each other, your first name: ").lower()
+        last_name=input("Your last name please.").lower()
+        if first_name not in "abcdefghijklmnopqrstuvwxyz":
+            first_name=input("WAIT! your name contains other than alphabets? ").lower()
+        elif last_name not in "abcdefghijklmnopqrstuvwxyz":
+            last_name=input("WAIT, your last name contains other than alphabets? ")
+        else:
+            break
 
     #number of guesses.
     try:
@@ -30,7 +33,7 @@ def main():
         #starting to guess.
         #guesses input type configuration.
         guess=input("Give 1 letter. ").upper()
-        while not (guess not in "ABCDEFGHIJKLMNEPQRST") and ((len(guess))>1):
+        while not (guess not in "ABCDEFGHIJKLMNEPQRSTUVWXYZ") and ((len(guess))>1):
             guess=input("type your guess here, 1 letter is a must. ").upper()
 
 
