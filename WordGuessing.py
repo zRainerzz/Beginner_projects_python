@@ -1,54 +1,23 @@
 import random
 
 def main():
+    wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
+    win=random.choice(wordslist)
+    
+    #first name && last name.
     try:
         first_name=input("your first name,It would be nice if you introduce yourself. isn't it? ").lower()
         last_name=input("What about your last name?").lower()
     except (first_name not in ["a-z"]) and (last_name not in ["a-z"]):
-        name=input("you cannot have other than letters in your name ").lower()
-        last_name=input("").lower
+        first_name=input("you cannot have other than letters in your name dude").lower()
+        last_name=input("what? your last name must have no more than letters.").lower()
 
 
-    result=[]
-    converted=[]
-    wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
-    win=random.choice(wordslist)
-    win_result=[]
-    
-    converted=list_convert(win)
-    result=word_contain(converted)
     try:
         a=int(input("Choose a number of tries which should be not over 15"))
     except TypeError or a>15:
         a=int(input("type an integer under 15."))
 
-
-    for _ in range(a):
-        guess=input("What's your first letter to start with?").upper()
-        if len(guess)!=1 or (guess not in ["A-Z","a-z"]):
-            guess=input("1 letter is a must.")
-        if win==converted:
-            print("you won!, congratz.")
-            break
-    print(result)
-
-
-
-def word_contain(win,a,converted):
-#test if the guess is in win or not.
-    for i in range (len(win)):
-        if a==win[i]:
-            converted[i]=a
-    return converted
-    
-
-def list_convert(win):
-#make a list of dot according to letters in a word.
-    result = []
-
-    for _ in (len(win)):
-            result.append(".")
-    return result
 
 
 
