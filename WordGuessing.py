@@ -36,7 +36,7 @@ def main():
         #guesses input type configuration.
         guess=input("Give 1 letter. ").upper()
         while not (guess not in "ABCDEFGHIJKLMNEPQRSTUVWXYZ") and ((len(guess))>1):
-            guess=input("type your guess here, 1 letter is a must. ").upper()
+            guess=input("type your guess here, 15 letter is a must. ").upper()
 
 
             #moving through all letters
@@ -63,7 +63,7 @@ def is_alphabetic(name):
     return name.isalpha()
 
 def letters_15(a):
-    while a>9:
+    while a>15:
         a=int(input("a number which is 15 or less. "))
     return a
 
