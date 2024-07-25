@@ -20,9 +20,9 @@ def main():
             print("Invalid last name. Please enter only alphabetic characters.")
 
     #number of guesses.
-    try:
+    
         a=int(input("Choose a number of tries which should be not over 15 "))
-    except TypeError and a>15:
+    while a>15:
         a=int(input("your tries count should be an integer under 15. "))
         
     #making a list of dots
