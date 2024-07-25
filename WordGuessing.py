@@ -20,9 +20,9 @@ def main():
             print("Invalid last name. Please enter only alphabetic characters.")
 
     #number of guesses.
-    
+    try:
         a=int(input("Choose a number of tries which should be not over 15 "))
-    while a>15:
+    except TypeError and a>15:
         a=int(input("your tries count should be an integer under 15. "))
         
     #making a list of dots
@@ -51,7 +51,7 @@ def main():
         if  (set(dots) == set(win)):
             with open ("WordGuessing_ranking.csv","a") as file:
                 file.write(f"{first_name},{last_name},{win} \n")
-                print(f"Congratulations {first_name}, You Won.{dots}, in {i} tries.")
+                print(f"Congratulations {first_name}, You Won.{dots}, in {i}tries.")
             break
 
         if (i==a) and not (set(dots) == set(win)):
