@@ -25,7 +25,7 @@ def word_contain(win,guess,converted):
 
 def input_1_letter(guess):
 #condition to put 1 letter only and being an alphabet is a must.
-    guess=input("What's your first letter to start with?")
+    guess=input("What's your first letter to start with?").upper()
     if len(guess):
         guess=input("1 letter is a must")
     elif (guess not in ["A-Z","a-z"]):
