@@ -3,12 +3,13 @@ import random
 def main():
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
     win=random.choice(wordslist)
-    winning_word=""
     #first name && last name.
+
     try:
         first_name=input("your first name,It would be nice if you introduce yourself. isn't it? ").lower()
         last_name=input("What about your last name?").lower()
-    except (first_name not in ["a-z"]) and (last_name not in ["a-z"]):
+
+    except (first_name not in ["a-z"]) and (last_name not in ["a-z"]): 
         first_name=input("you cannot have other than letters in your name dude").lower()
         last_name=input("what? your last name must have no more than letters.").lower()
 
@@ -26,7 +27,7 @@ def main():
 
     lenght=len(win)
     i=0
-    while (i!=a) and (len(dots) != len(win)):
+    while (i!=a):
         #starting to guess.
         #guesses input type configuration.
         guess=input("Give your first letter. ").upper()
@@ -41,6 +42,14 @@ def main():
                 dots[dot]=guess
                 print ("you were right about it.", dots)
         i+=1
+        if  (set(dots) == set(win)):
+            break
+
+    print(f"Congratulations {first_name}, You Won.{dots}")
+
+
+
+
 
 if __name__=="__main__":
     main()
