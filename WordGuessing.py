@@ -6,6 +6,8 @@ def main():
     converted=[]
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
     win=random.choice(wordslist)
+    win_result=[]
+    
     converted=list_convert(win)
     result=word_contain(converted)
     try:
@@ -18,19 +20,17 @@ def main():
         guess=input("What's your first letter to start with?").upper()
         if len(guess)!=1 or (guess not in ["A-Z","a-z"]):
             guess=input("1 letter is a must.")
+        if win==
     wordslist=["KING","QUEEN","PRINCE","HOME","LIFE","DETERMINATION","SUCESS","PALESTINE","FREE"]
-    win=random.choice(wordslist)
-    converted=list_convert(win)
-    result=word_contain(converted)
     print(result)
 
 
 
-def word_contain(win,guess,converted):
+def word_contain(win,a,converted):
 #test if the guess is in win or not.
     for i in range (len(win)):
-        if guess==win[i]:
-            converted[i]=guess
+        if a==win[i]:
+            converted[i]=a
     return converted
     
 
