@@ -22,7 +22,7 @@ def main():
     #number of guesses.
     try:
         a=int(input("Choose a number of tries which should be not over 15 "))
-    except TypeError and a>15:
+    except TypeError or a>15:
         a=int(input("your tries count should be an integer under 15. "))
         
     #making a list of dots
