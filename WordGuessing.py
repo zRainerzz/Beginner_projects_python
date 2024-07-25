@@ -24,7 +24,7 @@ def main():
         dots.append(".")
     print("So try your typo 1 by1 according to word's lengh ",dots)
 
-
+    lenght=len(win)
     i=0
     while (i!=a) or (set(winning_word) != set(win)):
         #starting to guess.
@@ -37,11 +37,9 @@ def main():
 
             #moving through all letters
         dot=0
-        if guess == win[dot]:
-            dots[j]=guess
+        if (guess == win[dot]) and (dot<(len(win))):
+            dots[dot]=guess
             print ("you were right about it.", dots)
-            
-
         else:
             dot +=1
         i+=1
